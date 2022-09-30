@@ -1,0 +1,110 @@
+<h1 mat-dialog-title>Add monster form</h1>
+<div mat-dialog-content>
+  <form [formGroup]="monsterForm">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Creature name</mat-label>
+        <input
+          formControlName="creature"
+          matInput
+          type="string"
+          placeholder="Createu"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>challenge</mat-label>
+        <input
+          formControlName="challenge"
+          matInput
+          type="number"
+          placeholder="Challenge"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Classification</mat-label>
+        <input
+          formControlName="classification"
+          matInput
+          type="string"
+          placeholder="Classification"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Size</mat-label>
+        <input
+          formControlName="size"
+          matInput
+          type="string"
+          placeholder="Size"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Armor</mat-label>
+        <input
+          formControlName="armor"
+          matInput
+          type="number"
+          placeholder="Armor"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Health</mat-label>
+        <input
+          formControlName="health"
+          matInput
+          type="number"
+          placeholder="Health"
+        />
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Alignment</mat-label>
+        <input
+          formControlName="alignment"
+          matInput
+          type="string"
+          placeholder="Alignment"
+        />
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Legendary</mat-label>
+        <mat-select formControlName="legendary" placeholder="Legendary">
+          <mat-option type="boolean" value="true">Legendary</mat-option>
+          <mat-option type="boolean" value="false">Not Legendary</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>portrait</mat-label>
+        <input formControlName="portrait" matInput />
+      </mat-form-field>
+    </p>
+  </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="primary" (click)="newMonster()">{{actionBtn}}</button>
+  <button
+    style="margin-left: 8px"
+    mat-raised-button
+    color="warn"
+    mat-dialog-close
+  >Close
+  </button>
+</div>
